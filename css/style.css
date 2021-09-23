@@ -215,6 +215,129 @@ body {
   margin-bottom: 35px;
 }
 
+.skills {
+  position: relative;
+}
+
+.skills__box {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  z-index: -1000;
+}
+
+.skills__box1 {
+  top: 0;
+  left: 0;
+  background-color: #f8f9f9;
+}
+
+.skills__box2 {
+  top: 0;
+  right: 0;
+  background-color: #e9e9e9;
+  background: url("../img/skills-bg.jpg") left top no-repeat;
+  background-size: contain;
+}
+
+.skills__inner {
+  padding: 160px 0 185px;
+}
+
+.skills__title {
+  margin-bottom: 30px;
+}
+
+.skills__subtitle {
+  max-width: 500px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 62px;
+  position: relative;
+}
+
+.skills__subtitle:last-child {
+  margin-bottom: 0;
+}
+
+.skills__subtitle::before, .skills__subtitle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -22px;
+  width: 100%;
+  height: 3px;
+}
+
+.skills__subtitle::before {
+  background-color: #d8d8d8;
+}
+
+.skills__subtitle::after {
+  background-color: #10c9c3;
+}
+
+.skills__subtitle1::after {
+  width: 75%;
+}
+
+.skills__subtitle2::after {
+  width: 90%;
+}
+
+.skills__subtitle3::after {
+  width: 65%;
+}
+
+.stats {
+  background-color: #10c9c3;
+}
+
+.stats__inner {
+  padding: 100px 0;
+  margin: 0 -10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.stats__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
+  padding-left: 70px;
+  position: relative;
+}
+
+.stats__item::before {
+  content: url("../img/icon-1.png");
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.stats__counter {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.stats__text {
+  font-size: 12px;
+}
+
 .footer {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
