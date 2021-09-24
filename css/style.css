@@ -347,8 +347,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -356,11 +354,88 @@ body {
 
 .goods__item {
   height: 300px;
-  width: 340px;
+  width: 25%;
+  z-index: 1;
+  position: relative;
 }
 
-.goods__img {
+.goods__item::before {
+  content: "";
+  display: block;
+  background-color: #10c9c3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
+  z-index: 100;
+  opacity: 0;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.goods__item:hover::before {
+  opacity: 0.8;
+}
+
+.goods__item::after {
+  content: url("../img/icon-eye.png");
+  display: block;
+  width: 48px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 101;
+  opacity: 0;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.goods__item:hover::after {
+  opacity: 1;
+}
+
+.goods__item--1 {
+  background: url("../img/good_1.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.goods__item--2 {
+  background: url("../img/good_2.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.goods__item--3 {
+  background: url("../img/good_3.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.goods__item--4 {
+  background: url("../img/good_4.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.goods__item--5 {
+  background: url("../img/good_5.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.goods__item--6 {
+  background: url("../img/good_6.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.goods__item--7 {
+  background: url("../img/good_7.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.goods__item--8 {
+  background: url("../img/good_8.jpg") center no-repeat;
+  background-size: cover;
 }
 
 .goods__btn {
@@ -382,6 +457,87 @@ body {
 
 .goods__btn a:hover {
   background-color: #e5e5e5;
+}
+
+.work-process__inner {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.work-process__title {
+  margin-bottom: 35px;
+}
+
+.work-process__text {
+  margin-bottom: 55px;
+}
+
+.work-process__video {
+  width: 100%;
+  height: 570px;
+  background-color: #e9e9e9;
+  position: relative;
+}
+
+.work-process__video::after {
+  content: url("../img/arrow.png");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 34px;
+  border-radius: 50%;
+  background-color: #10c9c3;
+  cursor: pointer;
+}
+
+.icons {
+  background-color: #f5f5f5;
+}
+
+.icons__inner {
+  padding: 100px 0;
+}
+
+.icons__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 -30px;
+}
+
+.icons__item {
+  padding: 0 30px;
+  text-align: center;
+  width: 25%;
+  margin-bottom: 50px;
+}
+
+.icons__icon {
+  margin-bottom: 20px;
+}
+
+.icons__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #191919;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.icons__text {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #787878;
 }
 
 .footer {
