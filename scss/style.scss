@@ -529,53 +529,172 @@ body {
 // === Quotes ===
 
 .quotes {
+	padding: 170px 0 60px;
+	background-color: #10c9c3;
+
+	@include font-montserrat;
+	font-weight: 500;
+	line-height: 1.5;
+	color: #fff;
+	text-align: center;
+
 	&__inner {
+		max-width: 830px;
+		margin: 0 auto;
 	}
 
 	&__text {
+		font-size: 24px;
+
+		margin-bottom: 35px;
+	}
+
+	&__text::before {
+		content: "“";
+		font-size: 30px;
+	}
+
+	&__text::after {
+		content: "”";
+		font-size: 30px;
 	}
 
 	&__name {
+		font-size: 12px;
+		text-transform: uppercase;
+
+		margin-bottom: 105px;
 	}
 
 	&__switcher {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__item {
+		background-color: #fff;
+		border-radius: 50%;
+		width: 6px;
+		height: 6px;
+		opacity: 0.7;
+
+		margin: 6px;
+	}
+
+	&__item:nth-child(2) {
+		width: 10px;
+		height: 10px;
+		opacity: 1;
 	}
 }
 
 // === /Quotes ===
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+// === Logos ===
+
+.logos {
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		padding: 65px 0;
+	}
+
+	&__img {
+		margin: 0 35px;
+	}
+}
+
+// === /Logos ===
+
+// === Feedback ===
+
+.feedback {
+	background-color: #f5f5f5;
+
+	padding: 100px 0;
+
+	&__inner {
+		max-width: 670px;
+		margin: 0 auto;
+
+		text-align: center;
+	}
+
+	&__title {
+		margin-bottom: 35px;
+	}
+
+	&__text {
+		margin-bottom: 35px;
+	}
+
+	&__form {
+		width: 100%;
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		margin: 0 -15px;
+	}
+
+	&__column {
+		padding: 0 15px;
+		width: 50%;
+	}
+
+	&__input {
+		padding: 18px 20px;
+		margin-bottom: 30px;
+
+		@include font-nunito;
+		font-size: 15px;
+		font-weight: 400;
+		color: #787878;
+	}
+
+	textarea {
+		resize: none;
+		height: 170px;
+	}
+
+	&__input[type="text"],
+	&__input[type="email"],
+	textarea {
+		width: 100%;
+	}
+
+	&__input[type="textarea"] {
+		height: 170px;
+	}
+
+	&__btn {
+		background-color: #10c9c3;
+
+		padding: 22px 35px;
+
+		@include font-montserrat;
+		font-size: 12px;
+		font-weight: 500;
+		color: #fff;
+		text-transform: uppercase;
+
+		transition: 0.2s linear;
+
+		cursor: pointer;
+	}
+
+	&__btn:hover {
+		background-color: #09b8b2;
+	}
+}
+
+// === /Feedback ===
 
 // === Footer ===
 
